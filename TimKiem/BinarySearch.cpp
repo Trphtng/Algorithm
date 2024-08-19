@@ -1,7 +1,8 @@
 #include <iostream>
 using namespace std;
 
-int binarySearch(int arr[], int left, int right, int x) {
+int binarySearch(int arr[], int x) {
+    int left = 0, right = n-1;
     while (left <= right) {
         int mid = left + (right - left) / 2;
 
@@ -21,7 +22,7 @@ int main() {
     int n = sizeof(arr) / sizeof(arr[0]);
     int x = 10;
 
-    int result = binarySearch(arr, 0, n - 1, x);
+    int result = binarySearch(arr, x);
 
     if (result != -1)
         cout << "Phan tu " << x << " duoc tim thay tai chi so " << result << endl;
